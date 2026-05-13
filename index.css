@@ -45,7 +45,8 @@ html {
 	transition:
 		background-color var(--transition-duration) linear;
 
-
+	--gap:0.4em;
+	--border-colour: var(--accent-colour);
 }
 
 

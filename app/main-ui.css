@@ -2,13 +2,7 @@
 
 a { color: var(--accent); }
 
-textarea {
-	margin-inline:1em;
-	width:calc(100vw - 3em);
-	min-height:75vh;
-	height:auto;
-	margin-block:1em;
-}
+
 
 header {
 	margin-block:0em;
@@ -22,8 +16,7 @@ header {
 	grid-template-columns: 1fr 1fr;
 	gap: var(--gap);
 
-	--gap:0.4em;
-	--border-colour: var(--accent-colour);
+
 
 	fieldset { border:none; }
 
@@ -44,9 +37,26 @@ header {
 	}
 }
 
+main {
+	display:grid;
+	grid-template-columns: 1fr;
+	gap: var(--gap);
+	textarea {
+		border-radius: var(--gap);
+		scrollbar-width: none;
+		margin-inline: var(--gap);
+		width: -moz-available; /*  calc(100% - 4 * var(--gap)); */
+		min-height:75vh;
+		height:auto;
+		margin-block: var(--gap);
+		padding: var(--gap);
+	}
+}
 
 
-
+@supports (width:stretch) {
+	main textarea {width:stretch;};
+}
 
 
 
