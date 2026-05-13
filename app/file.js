@@ -1,0 +1,58 @@
+
+import * as meditDoc from "./medit-document.js"
+
+
+
+
+
+
+/**
+ * @param {File} fileObj
+ */
+export function loadFile(fileObj, callbackFn) {
+
+
+	//document.forms['fileinput']['fileinput-textarea'].value = fileObj.text();
+	//console.log(fileObj.text());		// ugh promise
+
+
+	const reader = new FileReader();
+
+	reader.addEventListener(
+		"load",
+		() => {
+			callbackFn(reader.result.toString());
+		},
+		false,
+	);
+
+	if (fileObj) {
+		reader.readAsText(fileObj);
+	}
+
+}
+
+
+
+
+
+export function saveDocument() {
+
+	const saveDoc = new meditDoc.meditDocument();
+
+	saveDoc.title = 'medit document'
+	saveDoc.content = document.forms['document-form']['main-textarea'].value;
+
+	console.debug(saveDoc);
+
+	const downloadUrl = new URL(`data:text/plain;utf8,${encodeURIComponent(saveDoc.content)}`);
+
+	const downloadAnchor = /** @type {HTMLAnchorElement} */ (document.getElementById('download-anchor'));
+	downloadAnchor.href = downloadUrl.toString();
+	downloadAnchor.click();
+	//console.log(url.toString());
+	downloadAnchor.href = '';
+}
+
+
+

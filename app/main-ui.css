@@ -1,0 +1,18 @@
+
+
+a { color: var(--accent); }
+
+textarea {
+	width:75vw;
+	height:75vh;
+}
+
+header h1::before {
+	content: url("../favicon.svg") / "HTML experiment icon";
+}
+
+
+#dialog-appInfo {
+	&::backdrop { background-image:  url('../favicon.svg'); }
+	h1::before { content: url("../favicon.svg"); }
+}

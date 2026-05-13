@@ -1,0 +1,84 @@
+/*
+**	index.css
+*/
+
+@import "./[html-common]/style/fullpage/dialog-appInfo.css";
+@import "./[html-common]/style/page/header.css";
+
+@import "./app/main-ui.css";
+@import "./app/document-area.css";
+
+
+
+
+
+
+html {
+	--project-colour: whitesmoke;
+	--transition-duration: 0.5s;
+	--default-panel-colour: var(--scheme-colour);
+
+
+	--scheme-colour: oklch(from var(--project-colour) 0.80 c h / alpha);
+	--html-background: var(--scheme-colour);
+	--accent-colour: oklch(from var(--project-colour) 0.40 c h / alpha);
+	--text-colour: black;
+
+
+	background-color: var(--html-background);
+	accent-color: var(--accent-colour);
+	color: var(--text-colour);
+	color-scheme: light;
+
+	margin:0px;
+	padding:0px;
+
+	body {
+		margin:0px;
+		padding:0px;
+	}
+	scrollbar-width: none;
+
+	font-size: 14px; /* 14px; */
+	font-family:'Noto sans', sans-serif;
+
+	transition:
+		background-color var(--transition-duration) linear;
+
+
+}
+
+
+
+
+html[data-colourscheme="light"] {
+
+	--scheme-colour: oklch(from var(--project-colour) 0.80 c h / alpha);
+	--html-background: var(--scheme-colour);
+	--accent-colour: oklch(from var(--project-colour) 0.40 c h / alpha);
+	--text-colour: black;
+
+	color-scheme: light;
+
+	--background-lightness: 0.9;
+
+}
+
+html[data-colourscheme="dark"] {
+
+	--scheme-colour: oklch(from var(--project-colour) 0.20 c h / alpha);
+	--html-background: var(--scheme-colour);
+	--accent-colour: oklch(from var(--project-colour) 0.80 c h / alpha);
+	--text-colour: white;
+
+	color-scheme: dark;
+
+	--background-lightness: 0.2;
+}
+
+
+
+
+
+@media (prefers-color-scheme:dark) { }
+@media (prefers-color-scheme:light) { }

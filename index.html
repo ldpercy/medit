@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en" data-colourscheme="light">
+<head>
+	<title>Medit v0.0.0 by ldpercy</title>
+	<meta charset="utf-8">
+	<meta name="description" content="medit v0.0.0 by ldpercy">
+	<meta name="theme-color" content="skyblue"/>
+	<meta name="color-scheme" content="dark light">
+	<link rel="icon" href="./favicon.svg"/>
+	<link rel="stylesheet" href="./index.css"/>
+	<script  type="module"  src="./index.js"></script>
+</head>
+<body>
+
+	<header>
+		<div class="panel-group group-left">
+			<form id="form-application" name="application" tabindex="0" class="ui-panel">
+				<h1>Medit</h1>
+
+				<input type="file" name="fileinput" id="input-loadfile">
+
+				<button type="button" id="button-save">save</button>
+				<a name="downloadAnchor" id="download-anchor" download="_medit.md" href="" style="display:none;">download anchor</a>
+
+				<fieldset class="flex1">
+					<label title="Light scheme">
+						<input type="radio" name="colourScheme" value="light" class="colourScheme-selector" data-colourscheme="light" checked>
+						light
+					</label>
+					<label title="Dark scheme">
+						<input type="radio" name="colourScheme" value="dark" class="colourScheme-selector" data-colourscheme="dark">
+						dark
+					</label>
+				</fieldset>
+
+				<button type="button" id="button-showAppInfo"><strong>🛈 medit help</strong></button>
+
+			</form>
+		</div><!-- group-left -->
+	</header>
+
+	<main id="main-document-area">
+		<!-- main
+		-->
+		<form name="document-form">
+		<textarea id="main-textarea" name="main-textarea">
+			Welcome to Medit
+			================
+
+			Hope this works!!!
+		</textarea>
+		</form>
+
+	</main>
+
+	<dialog id="dialog-appInfo" closedby="any">
+		<h1>
+			<a href="https://github.com/ldpercy/medit/">Medit</a>
+			<a href="https://github.com/ldpercy/medit/releases/tag/v0.0.0">v0.0.0</a>
+			by <a href="https://github.com/ldpercy/">ldpercy</a>
+		</h1>
+
+		<h2>Keyboard shortcuts</h2>
+		<dl>
+			<dt><kbd>?</kbd></dt>
+			<dd>Show this dialog</dd>
+		</dl>
+
+
+	</dialog>
+
+
+</body>
+</html>
