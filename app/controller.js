@@ -18,7 +18,7 @@ class Controller {
 	constructor() {
 		this.element = HTMLApp.buildElementMap(document, this.elementMap)
 		HTMLApp.addEventListeners(this.eventListeners, this);
-		//console.debug('controller constructor');
+		this.keyboardHandler = HTMLApp.newKeyboardHandler(this.keyFunctionMap,this);
 	}
 
 
@@ -48,10 +48,11 @@ class Controller {
 		{
 			element: document,
 			type: 'keydown',
-			listener: this.documentKeyListener
+			//listener: this.keyboardHandler							//	Use this for a local keyboard handler
+			listener: (event) => { this.keyboardHandler(event); }		//	Use this for one generated from HTMLApp
 		},
 		{
-			query: '[contenteditable=plaintext-only]',
+			query: 'textarea',
 			type: 'keydown',
 			listener: (event)=>event.stopPropagation()
 		},

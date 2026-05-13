@@ -13,30 +13,30 @@
 <body>
 
 	<header>
-		<div class="panel-group group-left">
-			<form id="form-application" name="application" tabindex="0" class="ui-panel">
-				<h1>Medit</h1>
+		<h1>Medit</h1>
+		<form id="form-application" name="application" tabindex="0" class="ui-panel">
 
-				<input type="file" name="fileinput" id="input-loadfile">
 
-				<button type="button" id="button-save">save</button>
-				<a name="downloadAnchor" id="download-anchor" download="_medit.md" href="" style="display:none;">download anchor</a>
+			<input type="file" name="fileinput" id="input-loadfile">
 
-				<fieldset class="flex1">
-					<label title="Light scheme">
-						<input type="radio" name="colourScheme" value="light" class="colourScheme-selector" data-colourscheme="light" checked>
-						light
-					</label>
-					<label title="Dark scheme">
-						<input type="radio" name="colourScheme" value="dark" class="colourScheme-selector" data-colourscheme="dark">
-						dark
-					</label>
-				</fieldset>
+			<button type="button" id="button-save">save</button>
+			<a name="downloadAnchor" id="download-anchor" download="_medit.md" href="" style="display:none;">download anchor</a>
 
-				<button type="button" id="button-showAppInfo"><strong>🛈 medit help</strong></button>
+			<fieldset class="flex1">
+				<label title="Light scheme">
+					<input type="radio" name="colourScheme" value="light" class="colourScheme-selector" data-colourscheme="light" checked>
+					light
+				</label>
+				<label title="Dark scheme">
+					<input type="radio" name="colourScheme" value="dark" class="colourScheme-selector" data-colourscheme="dark">
+					dark
+				</label>
+			</fieldset>
 
-			</form>
-		</div><!-- group-left -->
+			<button type="button" id="button-showAppInfo"><strong>🛈 Medit help</strong></button>
+
+		</form>
+
 	</header>
 
 	<main id="main-document-area">
