@@ -4,19 +4,50 @@ a { color: var(--accent); }
 
 textarea {
 	margin-inline:1em;
-	width:calc(100% - 3em);
+	width:calc(100vw - 3em);
 	min-height:75vh;
 	height:auto;
 	margin-block:1em;
 }
 
-header h1::before {
-	content: url("../favicon.svg") / "HTML experiment icon";
+header {
+	margin-block:0em;
+	h1::before {
+		content: url("../favicon.svg") / "HTML experiment icon";
+	}
 }
 
 #form-application {
-	display:flex;
+	display:grid;
+	grid-template-columns: 1fr 1fr;
+	gap: var(--gap);
+
+	--gap:0.4em;
+	--border-colour: var(--accent-colour);
+
+	fieldset { border:none; }
+
+	.flex1 {
+		display: flex;
+		/* gap: var(--gap); */
+		&>* { flex: 1; }
+		text-align: center;
+	}
+
+
+	label:has([type=radio], [type=checkbox]), input[type=file] {
+		padding: var(--gap);
+		border-radius: var(--gap);
+		&:hover {
+			outline: 1px dotted var(--border-colour);
+		}
+	}
 }
+
+
+
+
+
 
 
 #dialog-appInfo {

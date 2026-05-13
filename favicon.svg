@@ -3,13 +3,19 @@
 	<style>
 		rect {
 			fill: whitesmoke;
+			fill-opacity: 60%;
 		}
 		text {
 			text-anchor: middle;
 			dominant-baseline: middle;
 			font-size:58px;
 			transform:scaleX(-1) rotate(30deg);
+			/* stroke:red; */
+			/* fill:red; */
 		}
+		@media (prefers-color-scheme:light)	{ fill:white; }
+		@media (prefers-color-scheme:dark)	{ fill:black; }
+
 	</style>
 
 	<rect x="-32" y="-32" width="64" height="64"/>
