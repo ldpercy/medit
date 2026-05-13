@@ -12,6 +12,8 @@ header {
 }
 
 #form-application {
+
+	font-size:1em;
 	display:grid;
 	grid-template-columns: 1fr 1fr;
 	gap: var(--gap);
@@ -42,6 +44,8 @@ main {
 	grid-template-columns: 1fr;
 	gap: var(--gap);
 	textarea {
+
+		font-size:1em;
 		border-radius: var(--gap);
 		scrollbar-width: none;
 		margin-inline: var(--gap);

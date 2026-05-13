@@ -30,6 +30,8 @@ html {
 	color: var(--text-colour);
 	color-scheme: light;
 
+
+
 	margin:0px;
 	padding:0px;
 
@@ -39,7 +41,7 @@ html {
 	}
 	/* scrollbar-width: none; */
 
-	font-size: 14px; /* 14px; */
+	font-size: 24px;
 	font-family:'Noto sans', sans-serif;
 
 	transition:
