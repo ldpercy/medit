@@ -13,8 +13,8 @@
 			/* stroke:red; */
 			/* fill:red; */
 		}
-		@media (prefers-color-scheme:light)	{ fill:white; }
-		@media (prefers-color-scheme:dark)	{ fill:black; }
+		@media (prefers-color-scheme: light)	{ text: { fill:black; } }
+		@media (prefers-color-scheme: dark)		{ text: { fill:white; } }
 
 	</style>
 
