@@ -2,25 +2,48 @@
 
 a { color: var(--accent); }
 
-
+.flex1 {
+	display: flex;
+	gap: var(--gap);
+	&>* { flex: 1; }
+	text-align: center;
+}
 
 header {
-	margin-block:0em;
+	position:sticky;
+	top:0em;
+	margin: var(--gap);
 	h1::before {
-		content: url("../favicon.svg") / "HTML experiment icon";
+		display: inline-block;
+		content: url("../favicon.svg");
+		height: 0.7em;
+		width: 0.7em;
+		margin-right:1rex;
+	}
+
+	z-index: 50;
+
+	h1 {
+		margin-block: 0em;
+		margin-top: 0em;
+		vertical-align:middle;
+		white-space-collapse: preserve;	/* not working yet for the favicon */
 	}
 }
 
 #form-application {
 
-	font-size:1em;
+	font-size:1rem;
 	display:grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
 	gap: var(--gap);
 
+	button, input { font-size:1rem; }
 
-
-	fieldset { border:none; }
+	fieldset {
+		border:none;
+		label { vertical-align: middle;}
+	}
 
 	.flex1 {
 		display: flex;
@@ -37,6 +60,9 @@ header {
 			outline: 1px dotted var(--border-colour);
 		}
 	}
+
+	#input-loadfile { grid-column-start: span 2; }
+
 }
 
 main {
@@ -54,6 +80,7 @@ main {
 		height:auto;
 		margin-block: var(--gap);
 		padding: var(--gap);
+		tab-size: 4;
 	}
 }
 
