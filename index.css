@@ -85,3 +85,11 @@ html[data-colourscheme="dark"] {
 
 @media (prefers-color-scheme:dark) { }
 @media (prefers-color-scheme:light) { }
+
+
+
+@media (max-width: 1000px) {
+	:root {
+		font-size:32px;
+	}
+}

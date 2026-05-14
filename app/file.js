@@ -1,7 +1,7 @@
 
 import * as meditDoc from "./medit-document.js"
 
-
+import { meditApp } from "./meditApp.js";
 
 
 
@@ -14,7 +14,9 @@ export function loadFile(fileObj, callbackFn) {
 
 	//document.forms['fileinput']['fileinput-textarea'].value = fileObj.text();
 	//console.log(fileObj.text());		// ugh promise
+	//console.log(fileObj);
 
+	meditApp.filename = fileObj.name;
 
 	const reader = new FileReader();
 
@@ -43,11 +45,12 @@ export function saveDocument() {
 	saveDoc.title = 'medit document'
 	saveDoc.content = document.forms['document-form']['main-textarea'].value;
 
-	console.debug(saveDoc);
+	//console.debug(saveDoc);
 
 	const downloadUrl = new URL(`data:text/plain;utf8,${encodeURIComponent(saveDoc.content)}`);
 
 	const downloadAnchor = /** @type {HTMLAnchorElement} */ (document.getElementById('download-anchor'));
+	downloadAnchor.download = meditApp.filename;
 	downloadAnchor.href = downloadUrl.toString();
 	downloadAnchor.click();
 	//console.log(url.toString());

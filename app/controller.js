@@ -6,7 +6,7 @@
 import { HTMLApp } from "../[html-common]/module/HTMLApp.js";
 import { meditApp } from "./meditApp.js";
 import { ui } from './main-ui.js';
-import { documentArea } from "./document-area.js";
+// import { documentArea } from "./document-area.js";
 import * as file from "./file.js"
 
 

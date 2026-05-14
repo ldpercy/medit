@@ -22,6 +22,8 @@ class MeditApp extends HTMLApp {
 	];
 
 
+	filename	= "medit.md";
+
 
 	/** @type {object} */
 	elementMap = {
