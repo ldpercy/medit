@@ -5,6 +5,10 @@ import { meditApp } from "./meditApp.js";
 
 
 
+let filename	= "medit.md";
+let mediatype	= "text/markdown";
+
+
 
 /**
  * @param {File} fileObj
@@ -14,9 +18,11 @@ export function loadFile(fileObj, callbackFn) {
 
 	//document.forms['fileinput']['fileinput-textarea'].value = fileObj.text();
 	//console.log(fileObj.text());		// ugh promise
-	//console.log(fileObj);
+	console.log(fileObj);
 
-	meditApp.filename = fileObj.name;
+	filename = fileObj.name;
+	mediatype = fileObj.type;
+
 
 	const reader = new FileReader();
 
@@ -47,10 +53,10 @@ export function saveDocument() {
 
 	//console.debug(saveDoc);
 
-	const downloadUrl = new URL(`data:text/plain;utf8,${encodeURIComponent(saveDoc.content)}`);
+	const downloadUrl = new URL(`data:${mediatype};utf8,${encodeURIComponent(saveDoc.content)}`);
 
 	const downloadAnchor = /** @type {HTMLAnchorElement} */ (document.getElementById('download-anchor'));
-	downloadAnchor.download = meditApp.filename;
+	downloadAnchor.download = filename;
 	downloadAnchor.href = downloadUrl.toString();
 	downloadAnchor.click();
 	//console.log(url.toString());
