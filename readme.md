@@ -5,7 +5,8 @@ Medit
 	<img width="15%" src="./favicon.svg" alt="medit" title="medit"/>
 </p>
 
-A simple markdown text editor.
+A very simple text editor, suitable for mobile use.
+
 
 Tasks
 -----
@@ -14,15 +15,15 @@ More detail in the [task/](<./task/>) directory.
 
 ### Recently Completed
 
-* Sync with html-common v0.3 for common styles
+* 0.1 release
 * Initialise project
 
 
 ### Currently working on
-
-* Project setup
+* Mobile design considerations
+* localstorage for settings
 
 
 ### Future work
+* Markdown toolbar
 
-* 0.1 release

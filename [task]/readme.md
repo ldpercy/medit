@@ -6,11 +6,13 @@ Todo
 ----
 
 
-* Figure out how to share css between the ui and download docs
+* input[type=file] accept list - 'text/*' doesn't work for me, might be non-standard
+*
 
 
 Done
 ----
 
-*  html-common v0.3 for common styles
+*
+* project setup
 
