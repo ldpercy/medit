@@ -13,7 +13,7 @@ class MeditApp extends HTMLApp {
 
 	appName			= 'Medit';
 	appVersion		= 'v0.0.0';
-	projectColour	= 'whitesmoke';
+	projectColour	= 'mediumturquoise';
 	appInfo = [`%c
 		Medit ${this.appVersion} by ldpercy
 		https://github.com/ldpercy/medit/releases/tag/${this.appVersion}

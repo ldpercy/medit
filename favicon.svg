@@ -2,7 +2,7 @@
 
 	<style>
 		rect {
-			fill: whitesmoke;
+			fill: mediumturquoise;
 			fill-opacity: 60%;
 		}
 		text {
