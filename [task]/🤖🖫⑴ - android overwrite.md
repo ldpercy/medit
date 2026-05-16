@@ -23,3 +23,7 @@ https://www.androidpolice.com/install-add-on-extension-mozilla-firefox-android/
 
 Alternatively for now I could swerve to local storage, and just use downloads as a backup???
 
+Other possible leads:
+* https://developer.mozilla.org/en-US/docs/Web/API/Window/showSaveFilePicker
+* https://developer.mozilla.org/en-US/docs/Web/API/FileSystemWritableFileStream
+
