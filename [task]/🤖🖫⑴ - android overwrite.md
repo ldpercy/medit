@@ -27,3 +27,17 @@ Other possible leads:
 * https://developer.mozilla.org/en-US/docs/Web/API/Window/showSaveFilePicker
 * https://developer.mozilla.org/en-US/docs/Web/API/FileSystemWritableFileStream
 
+
+
+
+FileHandle
+----------
+
+https://developer.mozilla.org/en-US/docs/Web/API/FileSystemFileHandle
+
+
+The browser support for some of the file apis is a bit mixed, esp for firefox; chrome should be okay.
+
+FileSystemFileHandle is supported by ff, but showSaveFilePicker *isn't*, which afaict is the only way to create the handle... ???
+There might be another way or something I'm missing.
+
