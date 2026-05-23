@@ -53,15 +53,55 @@ export function saveDocument() {
 
 	//console.debug(saveDoc);
 
-	const downloadUrl = new URL(`data:${mediatype};utf8,${encodeURIComponent(saveDoc.content)}`);
+	// @ts-ignore
+	if (window.showSaveFilePicker) {
+		saveUsingFileHandle(saveDoc);
+	}
+	else {
+		saveUsingDownloadAnchor(saveDoc);
+	}
+}
 
+async function saveUsingFileHandle(saveDoc) {
+	console.log('saveUsingFileHandle');
+		const opts = {
+			types: [
+				{
+					description: "Text file",
+					accept: { "text/plain": [".txt"] },
+				},
+				{
+					description: "Markdown file",
+					accept: { "text/markdown": [".md"] },
+				},
+			],
+		};
+
+		// @ts-ignore
+		const saveFileHandle = await window.showSaveFilePicker(opts);
+
+		console.log(saveFileHandle);
+
+		const writableStream = await saveFileHandle.createWritable();
+
+		console.log(writableStream);
+
+		// write our file
+		await writableStream.write(saveDoc.content);
+
+		// close the file and write the contents to disk.
+		await writableStream.close();
+}
+
+
+function saveUsingDownloadAnchor(saveDoc) {
+	console.log('saveUsingDownloadAnchor');
+	const downloadUrl = new URL(`data:${mediatype};utf8,${encodeURIComponent(saveDoc.content)}`);
 	const downloadAnchor = /** @type {HTMLAnchorElement} */ (document.getElementById('download-anchor'));
 	downloadAnchor.download = filename;
 	downloadAnchor.href = downloadUrl.toString();
 	downloadAnchor.click();
-	//console.log(url.toString());
 	downloadAnchor.href = '';
 }
-
 
 

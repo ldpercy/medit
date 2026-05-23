@@ -41,3 +41,11 @@ The browser support for some of the file apis is a bit mixed, esp for firefox; c
 FileSystemFileHandle is supported by ff, but showSaveFilePicker *isn't*, which afaict is the only way to create the handle... ???
 There might be another way or something I'm missing.
 
+
+I've added in a switch to use `window.showSaveFilePicker` if present, and fallback to the old download link if not.
+
+Just noticed Chrome show this in the title of the save dialog:
+
+	"Warning: this site can see edits you make"
+
+Bit scary sounding.
