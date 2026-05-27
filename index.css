@@ -15,6 +15,9 @@
 
 html {
 	--project-colour: mediumturquoise;
+
+	--project-colour-hsl: hsl(178, 60%, 55%);	/* mediumturquoise */
+
 	--transition-duration: 0.5s;
 	--default-panel-colour: var(--scheme-colour);
 
@@ -56,7 +59,7 @@ html {
 
 html[data-colourscheme="light"] {
 
-	--scheme-colour: oklch(from var(--project-colour) 0.80 c h / alpha);
+	--scheme-colour: hsl(from var(--project-colour) h s 80 / alpha);
 	--html-background: var(--scheme-colour);
 	--accent-colour: oklch(from var(--project-colour) 0.40 c h / alpha);
 	--text-colour: black;
@@ -69,7 +72,7 @@ html[data-colourscheme="light"] {
 
 html[data-colourscheme="dark"] {
 
-	--scheme-colour: oklch(from var(--project-colour) 0.20 c h / alpha);
+	--scheme-colour: hsl(from var(--project-colour) h s 20/ alpha);
 	--html-background: var(--scheme-colour);
 	--accent-colour: oklch(from var(--project-colour) 0.80 c h / alpha);
 	--text-colour: white;
@@ -93,3 +96,6 @@ html[data-colourscheme="dark"] {
 		font-size:32px;
 	}
 }
+
+
+
