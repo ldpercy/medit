@@ -4,11 +4,14 @@
 	<title>Medit v0.1.0 by ldpercy</title>
 	<meta charset="utf-8">
 	<meta name="description" content="medit v0.1.0 by ldpercy">
-	<meta name="theme-color" content="mediumturquoise"/>
-	<meta name="color-scheme" content="dark light">
 	<link rel="icon" href="./favicon.svg"/>
 	<link rel="stylesheet" href="./index.css"/>
 	<script  type="module"  src="./index.js"></script>
+
+	<meta name="color-scheme" content="light dark">
+	<meta name="theme-color" content="oklch(from var(--project-colour) 0.80 c h / alpha)" media="(prefers-color-scheme: light)" />
+	<meta name="theme-color" content="oklch(from var(--project-colour) 0.20 c h / alpha)" media="(prefers-color-scheme: dark)" />
+	<!-- i dont think the above will work, but will give it a try -->
 </head>
 <body>
 
