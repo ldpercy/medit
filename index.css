@@ -59,7 +59,7 @@ html {
 
 html[data-colourscheme="light"] {
 
-	--scheme-colour: hsl(from var(--project-colour) h s 80 / alpha);
+	--scheme-colour: hsl(from var(--project-colour) h s 70 / alpha);
 	--html-background: var(--scheme-colour);
 	--accent-colour: oklch(from var(--project-colour) 0.40 c h / alpha);
 	--text-colour: black;
@@ -72,7 +72,7 @@ html[data-colourscheme="light"] {
 
 html[data-colourscheme="dark"] {
 
-	--scheme-colour: hsl(from var(--project-colour) h s 20/ alpha);
+	--scheme-colour: hsl(from var(--project-colour) h s 10/ alpha);
 	--html-background: var(--scheme-colour);
 	--accent-colour: oklch(from var(--project-colour) 0.80 c h / alpha);
 	--text-colour: white;
