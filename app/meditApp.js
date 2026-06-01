@@ -35,7 +35,7 @@ class MeditApp extends HTMLApp {
 
 	documentDOMContentLoaded() {
 		super.documentDOMContentLoaded();
-		//ui.colourScheme = localStorage[`${this.appName}_colourScheme`] || 'light';
+		controller.setColourScheme(localStorage[`${this.appName}_colourScheme`] || 'light');
 		this.loadSettings();
 		this.setup();
 	}/* documentDOMContentLoaded */
@@ -114,6 +114,7 @@ class MeditApp extends HTMLApp {
 
 		localStorage.setItem(`${this.appName}_loadedAt`, new Date().toISOString());
 	}/* loadSettings */
+
 
 
 

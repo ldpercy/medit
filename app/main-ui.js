@@ -33,7 +33,6 @@ class MainUserInterface {
 	/** @param {string} colourScheme */
 	set colourScheme(colourScheme) {
 		element.appForm.colourScheme.value = colourScheme;
-		meditApp.setColourScheme(colourScheme);
 	}
 
 

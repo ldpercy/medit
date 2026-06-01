@@ -38,7 +38,7 @@ class Controller {
 		{
 			query: '.colourScheme-selector',
 			type: 'click',
-			listener: (event) => { ui.colourScheme = event.target.dataset.colourscheme; }
+			listener: (event) => { this.setColourScheme(event.target.dataset.colourscheme); }
 		},
 		{
 			element: document,
@@ -102,6 +102,13 @@ class Controller {
 	//
 	//	handlers
 	//
+
+
+	/** @param {string} colourScheme */
+	setColourScheme(colourScheme) {
+		ui.colourScheme = colourScheme;
+		meditApp.setColourScheme(colourScheme);
+	}
 
 
 
