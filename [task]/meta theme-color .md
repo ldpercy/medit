@@ -26,4 +26,24 @@ I'm only targeting Android chrome right now so whatever works there will be good
 
 
 
+Dynamic setting
+---------------
+
+Making a little way forward here.
+
+https://stackoverflow.com/questions/41725725/access-css-variable-from-javascript
+
+https://stackoverflow.com/questions/79034015/how-can-i-get-final-hex-color-in-javascript-from-a-relative-css-color-string
+
+
+This *nearly* works in the colour scheme switcher:
+```js
+	document.getElementById('meta-themeColor').setAttribute('content', window.getComputedStyle(document.documentElement).backgroundColor);
+```
+
+But it seems to be timing sensitive - feels like it's returning values partway through the transition.
+
+Might need to use a proxy element unaffected by a transition to get the computed value immediately.
+
+Or see if the variable can be directly turned into a simple colour string.
 
