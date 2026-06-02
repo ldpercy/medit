@@ -107,6 +107,7 @@ class Controller {
 	/** @param {string} colourScheme */
 	setColourScheme(colourScheme) {
 		ui.colourScheme = colourScheme;
+		document.getElementById('meta-themeColor').setAttribute('content', window.getComputedStyle(document.documentElement).backgroundColor);
 		meditApp.setColourScheme(colourScheme);
 	}
 

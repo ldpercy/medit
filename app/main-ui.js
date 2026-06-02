@@ -6,8 +6,9 @@ import { meditApp } from "./meditApp.js";
 
 let element;
 const elementMap = {
-	appForm		: 'form-application',
+	appForm			: 'form-application',
 	appInfoDialog	: 'dialog-appInfo',
+	metaThemeColor	: 'meta-themeColor',
 };
 
 
