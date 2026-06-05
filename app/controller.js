@@ -39,7 +39,7 @@ class Controller {
 		{
 			query: '.colourScheme-selector',
 			type: 'click',
-			listener: (event) => { this.setColourScheme(event.target.dataset.colourscheme); }
+			listener: (event) => { ui.setColourScheme(event.target.dataset.colourscheme); }
 		},
 		{
 			element: document,
@@ -98,8 +98,6 @@ class Controller {
 
 
 
-
-
 	//
 	//	handlers
 	//
@@ -107,19 +105,19 @@ class Controller {
 
 	/**@param {File} inputFile */
 	loadFile(inputFile) {
-		file.loadFile(inputFile, meditApp.fileLoaded);
+		file.loadFile(inputFile, this.fileLoaded);
 	}
 
 
-	/** @param {string} colourScheme */
-	setColourScheme(colourScheme) {
-		ui.colourScheme = colourScheme;
-		meditApp.setColourScheme(colourScheme);
 
-		// try using the meta element itself as the element to read for colour changes
-		this.element.metaThemeColor.setAttribute('content', window.getComputedStyle(this.element.metaThemeColor).color);
-
+	/** @param {string} fileContent */
+	fileLoaded(fileContent) {
+		// this will then display a text file
+		//content.innerText = reader.result;
+		//document.forms['fileinput']['fileinput-textarea'].value = reader.result;
+		ui.editorContent = fileContent;
 	}
+
 
 
 
@@ -138,7 +136,7 @@ class Controller {
 
 	saveDocument() {
 
-		const documentContent = document.forms['document-form']['main-textarea'].value;
+		const documentContent = ui.editorContent;
 
 		const url = new URL(`data:text/plain;utf8,${encodeURIComponent(documentContent)}`);
 		this.element.downloadAnchor.href = url.toString();

@@ -35,29 +35,14 @@ class MeditApp extends HTMLApp {
 
 	documentDOMContentLoaded() {
 		super.documentDOMContentLoaded();
-		controller.setColourScheme(localStorage[`${this.appName}_colourScheme`] || 'light');
-		this.loadSettings();
 		this.setup();
 	}/* documentDOMContentLoaded */
 
 
 
 	setup() {
-
-	}
-
-
-
-	// controller methods
-
-
-
-	/** @param {string} fileContent */
-	fileLoaded(fileContent) {
-		// this will then display a text file
-		//content.innerText = reader.result;
-		//document.forms['fileinput']['fileinput-textarea'].value = reader.result;
-		document.forms['document-form']['main-textarea'].value = fileContent;
+		this.loadSettings();
+		ui.setup();
 	}
 
 
