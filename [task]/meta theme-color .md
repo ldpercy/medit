@@ -47,3 +47,7 @@ Might need to use a proxy element unaffected by a transition to get the computed
 
 Or see if the variable can be directly turned into a simple colour string.
 
+Okay have something working here now, am using the meta element itself to immediately store and read the new theme colour.
+
+Will call this v0.2.0 and wrap here.
+

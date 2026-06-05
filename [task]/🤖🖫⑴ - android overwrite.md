@@ -44,8 +44,12 @@ There might be another way or something I'm missing.
 
 I've added in a switch to use `window.showSaveFilePicker` if present, and fallback to the old download link if not.
 
-Just noticed Chrome show this in the title of the save dialog:
+Just noticed Chrome (desktop) shows this in the title of the save dialog:
 
 	"Warning: this site can see edits you make"
 
 Bit scary sounding.
+
+
+Anyway it's working for Chrome on Android at the moment.
+
