@@ -34,7 +34,7 @@ class Controller {
 		{
 			element: document.forms['application']['fileinput'],
 			type: 'change',
-			listener: (event) => { file.loadFile(event.target.files[0], meditApp.fileLoaded); }
+			listener: (event) => { this.loadFile(event.target.files[0]); }
 		},
 		{
 			query: '.colourScheme-selector',
@@ -103,6 +103,12 @@ class Controller {
 	//
 	//	handlers
 	//
+
+
+	/**@param {File} inputFile */
+	loadFile(inputFile) {
+		file.loadFile(inputFile, meditApp.fileLoaded);
+	}
 
 
 	/** @param {string} colourScheme */
