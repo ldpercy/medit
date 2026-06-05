@@ -40,6 +40,8 @@ html {
 	margin:0px;
 	padding:0px;
 
+	meta[name=theme-color] { color: var(--scheme-colour); }	/* trying a little hack here - this element has no display, but it can be used to compute the colour change as it has no transition */
+
 	body {
 		margin:0px;
 		padding:0px;

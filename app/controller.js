@@ -24,7 +24,8 @@ class Controller {
 
 	elementMap = {
 		// appInfoDialog	: 'dialog-appInfo',
-		downloadAnchor	: 'download-anchor',
+		downloadAnchor		: 'download-anchor',
+		metaThemeColor		: 'meta-themeColor',
 	};
 
 
@@ -108,7 +109,10 @@ class Controller {
 	setColourScheme(colourScheme) {
 		ui.colourScheme = colourScheme;
 		meditApp.setColourScheme(colourScheme);
-		document.getElementById('meta-themeColor').setAttribute('content', window.getComputedStyle(document.documentElement).backgroundColor);
+
+		// try using the meta element itself as the element to read for colour changes
+		this.element.metaThemeColor.setAttribute('content', window.getComputedStyle(this.element.metaThemeColor).color);
+
 	}
 
 
