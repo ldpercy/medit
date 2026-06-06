@@ -13,15 +13,16 @@ Tasks
 
 More detail in the [task/](<./task/>) directory.
 
-### Recently Completed
-
-* 0.1 release
-* Initialise project
-
-
 ### Currently working on
-* Mobile design considerations
+* [File overwrite for Firefox Android](<[task]/🤖🖫⑴ - android overwrite.md>)
 * localstorage for settings
+* Mobile design considerations
+
+
+### Recently Completed
+* v0.2 - theme colour changing for chrome on android
+* v0.1 - first release
+* Initialise project
 
 
 ### Future work
