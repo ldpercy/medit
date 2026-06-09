@@ -12,6 +12,7 @@ a { color: var(--accent); }
 	justify-content: space-between;
 }
 
+
 header {
 	position:sticky;
 	top:0em;
@@ -54,19 +55,15 @@ header {
 
 	button, input { font-size:1rem; }
 
+
+
+
+
 	fieldset {
 		border:none;
 		margin:0px;
 		padding:0px;
 		label { vertical-align: central;}
-
-	}
-
-	.flex1 {
-		display: flex;
-		/* gap: var(--gap); */
-		&>* { flex: 1; }
-		text-align: center;
 	}
 
 
@@ -80,7 +77,11 @@ header {
 
 	#input-loadfile { grid-column-start: span 2; }
 
+
 }
+
+
+
 
 main {
 	margin-block: var(--base-length);
@@ -103,11 +104,13 @@ main {
 		padding: var(--base-length);
 		tab-size: 4;
 	}
-}
 
+	fieldset {
+		border:none;
+		margin-block: var(--base-length);
+		padding:0px;
+	}
 
-@supports (width:stretch) {
-	main textarea {width:stretch;};
 }
 
 
