@@ -1,4 +1,6 @@
-
+/*
+**	main-ui.css
+*/
 
 a { color: var(--accent); }
 
@@ -7,19 +9,19 @@ a { color: var(--accent); }
 	gap: var(--gap);
 	&>* { flex: 1; }
 	text-align: center;
+	justify-content: space-between;
 }
 
 header {
 	position:sticky;
 	top:0em;
-	margin: var(--gap);
-	h1::after {
+	/* h1::after {
 		display: inline-block;
 		content: url("../favicon.svg");
 		height: 0.7em;
 		width: 0.7em;
 		margin-left:0.2em;
-	}
+	} */
 
 	z-index: 50;
 
@@ -27,8 +29,20 @@ header {
 		margin-block: 0em;
 		margin-top: 0em;
 		vertical-align:middle;
-		white-space-collapse: preserve;	/* not working yet for the favicon */
+		text-wrap-mode: nowrap;
+		/* white-space-collapse: preserve;	not working yet for the favicon */
+		img {
+			height: calc(3 * var(--base-length));
+			width: calc(3 * var(--base-length));
+		}
 	}
+
+	/* button {
+		border-radius: var(--base-length);
+		border-style: outset;
+		&:hover { background-color: grey;}
+	} */
+
 }
 
 #form-application {
@@ -42,7 +56,10 @@ header {
 
 	fieldset {
 		border:none;
-		label { vertical-align: middle;}
+		margin:0px;
+		padding:0px;
+		label { vertical-align: central;}
+
 	}
 
 	.flex1 {
@@ -66,20 +83,24 @@ header {
 }
 
 main {
-	display:grid;
-	grid-template-columns: 1fr;
-	gap: var(--gap);
+	margin-block: var(--base-length);
+	/* div {
+		outline: 1px dashed yellow;
+	} */
+
 	textarea {
+		display: block;
+		box-sizing: border-box;
+		width: 100%;
 
 		font-size:1em;
-		border-radius: var(--gap);
+		border-radius: var(--base-length);
 		/* scrollbar-width: none; */
-		margin-inline: var(--gap);
-		width: -moz-available; /*  calc(100% - 4 * var(--gap)); */
+
 		min-height:75vh;
 		height:auto;
-		margin-block: var(--gap);
-		padding: var(--gap);
+
+		padding: var(--base-length);
 		tab-size: 4;
 	}
 }

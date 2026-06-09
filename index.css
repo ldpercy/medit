@@ -44,17 +44,20 @@ html {
 
 	body {
 		margin:0px;
-		padding:0px;
+		padding: var(--base-length);
 	}
 	/* scrollbar-width: none; */
 
-	font-size: 24px;
-	font-family:'Noto sans', sans-serif;
+	--base-length: 12px;
+	--gap: var(--base-length);
+	font-size: calc(2 * var(--base-length));
+
+	font-family: 'Noto sans', sans-serif;
 
 	transition:
 		background-color var(--transition-duration) linear;
 
-	--gap:0.4em;
+
 	--border-colour: var(--accent-colour);
 }
 
@@ -97,7 +100,7 @@ html[data-colourscheme="dark"] {
 
 @media (max-width: 1000px) {
 	:root {
-		font-size:32px;
+		--base-length: 18px;
 	}
 }
 
