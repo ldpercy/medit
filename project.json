@@ -1,0 +1,9 @@
+{
+	"name"			: "medit",
+	"description"	: "Experimental parser for silver data",
+	"repository"	: "https://github.com/ldpercy/medit/",
+	"version"		: "0.3.0-development",
+	"commit"		: "abcdef",
+	"date"			: "2026-10-25",
+	"tag"			: ["html","css","js"]
+}
