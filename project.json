@@ -1,6 +1,6 @@
 {
 	"name"			: "medit",
-	"description"	: "Experimental parser for silver data",
+	"description"	: "Mini text editor",
 	"repository"	: "https://github.com/ldpercy/medit/",
 	"version"		: "0.3.0-development",
 	"commit"		: "abcdef",
