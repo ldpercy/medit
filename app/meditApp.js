@@ -12,7 +12,7 @@ import { ui } from './main-ui.js';
 class MeditApp extends HTMLApp {
 
 	appName			= 'Medit';
-	appVersion		= 'v0.2.0';
+	appVersion		= '0.3_dev';
 	projectColour	= 'mediumturquoise';
 	appInfo = [`%c
 		Medit ${this.appVersion} by ldpercy

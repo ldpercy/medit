@@ -2,8 +2,11 @@
 	"name"			: "medit",
 	"description"	: "Mini text editor",
 	"repository"	: "https://github.com/ldpercy/medit/",
-	"version"		: "0.3.0-development",
+	"version"		: "0.3_dev",
 	"commit"		: "abcdef",
 	"date"			: "2026-10-25",
-	"tag"			: ["html","css","js"]
+	"tag"			: ["html","css","js","JSDoc"],
+	"screenshot"	: [
+		"[project]/example/medit-screenshot-light.png"
+	]
 }
