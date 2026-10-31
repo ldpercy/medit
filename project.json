@@ -8,7 +8,7 @@
 	"tag"			: ["html","css","js","JSDoc"],
 	"screenshot"	: [
 		{
-			"path"	: "[project]/example/medit-screenshot-light.png"
+			"path"	: "[project]/screenshot/medit-screenshot-light.png"
 		}
 	]
 }
