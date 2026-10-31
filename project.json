@@ -7,6 +7,8 @@
 	"date"			: "2026-10-25",
 	"tag"			: ["html","css","js","JSDoc"],
 	"screenshot"	: [
-		"[project]/example/medit-screenshot-light.png"
+		{
+			"path"	: "[project]/example/medit-screenshot-light.png"
+		}
 	]
 }
