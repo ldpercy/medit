@@ -1,9 +1,10 @@
-{
+/** @type ProjectData */
+export default {
 	"name"			: "medit",
 	"description"	: "Mini text editor",
 	"repository"	: "https://github.com/ldpercy/medit/",
 	"version"		: "0.3_dev",
-	"commit"		: "abcdef",
+	"status"		: "abcdef",
 	"date"			: "2026-10-25",
 	"tag"			: ["html","css","js","JSDoc"],
 	"screenshot"	: [
