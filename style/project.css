@@ -1,0 +1,10 @@
+/*
+**	project.css
+
+This stylesheet is kept minimal to make for an easy js import in the HTML app.
+Chrome will throw up a warning when importing sheets that have their own @import rules in them.
+*/
+
+:root {
+	--project-colour: mediumturquoise;
+}

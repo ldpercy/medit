@@ -3,10 +3,7 @@
 */
 
 @import "./[html-common]/style/fullpage/dialog-appInfo.css";
+@import "./style/project.css";
 @import "./style/html.css";
 @import "./style/main-ui.css";
 @import "./style/document-area.css";
-
-:root {
-	--project-colour: mediumturquoise;
-}
