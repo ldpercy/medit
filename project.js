@@ -4,9 +4,9 @@ export default {
 	"description"	: "Mini text editor",
 	"repository"	: "https://github.com/ldpercy/medit/",
 	"version"		: "0.3_dev",
-	"status"		: "abcdef",
-	"date"			: "2026-10-25",
-	"tag"			: ["html","css","js","JSDoc"],
+	"status"		: "Early development",
+	"date"			: "2026-11-20",
+	"tag"			: ["html","css","js","JSDoc","🍦js"],
 	"screenshot"	: [
 		{
 			"path"	: "[project]/screenshot/medit-screenshot-light.png"
