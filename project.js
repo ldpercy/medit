@@ -9,7 +9,7 @@ export default {
 	"tag"			: ["html","css","js","JSDoc","🍦js"],
 	"screenshot"	: [
 		{
-			"path"	: "[project]/screenshot/medit-screenshot-light.png"
+			"path"	: "[project]/screenshot/medit-screenshot-1.webp"
 		}
 	]
 }

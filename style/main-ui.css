@@ -27,6 +27,7 @@ header {
 	z-index: 50;
 
 	h1 {
+		/* font-family: gentium, serif; */
 		margin-block: 0em;
 		margin-top: 0em;
 		vertical-align:middle;

@@ -26,13 +26,13 @@ Tasks
 More detail in the [project](<./[project]/>) directory.
 
 ### Currently working on
-* Update for project-data
 * [File overwrite for Firefox Android](<[task]/🤖🖫⑴ - android overwrite.md>)
 * localstorage for settings
 * Mobile design considerations
 
 
 ### Recently Completed
+* v0.3 - Update for project-data (+various): [0.3 project data](<[project]/0.3 - project data.md>)
 * v0.2 - theme colour changing for chrome on android
 * v0.1 - first release
 * Initialise project
