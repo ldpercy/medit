@@ -33,8 +33,10 @@ header {
 		text-wrap-mode: nowrap;
 		/* white-space-collapse: preserve;	not working yet for the favicon */
 		img {
-			height: calc(3 * var(--base-length));
-			width: calc(3 * var(--base-length));
+			position:relative;
+			top:0.4ex;
+			height: calc(4 * var(--base-length));
+			width: calc(4 * var(--base-length));
 		}
 	}
 
