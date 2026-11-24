@@ -3,24 +3,21 @@
 //
 
 import { HTMLApp } from "../[html-common]/module/HTMLApp.js";
-
 import { controller} from './controller.js';
 import { documentArea } from './document-area.js';
 import { ui } from './main-ui.js';
+
+import projectStyle from "../style/project.css" with { type: 'css' };
+// currently getting syntax/lint errors with either form of css import;
+// not sure yet which is 'better' here, slightly leaning towards this static style if the squigglies can be sorted out
+import project from '../project.js';
 
 
 class MeditApp extends HTMLApp {
 
 	appName			= 'Medit';
-	appVersion		= 'v0.2.0';
-	projectColour	= 'mediumturquoise';
-	appInfo = [`%c
-		Medit ${this.appVersion} by ldpercy
-		https://github.com/ldpercy/medit/releases/tag/${this.appVersion}
-		`.replace(/\n\t/g,'\n'),
-		`color: light-dark(hsl(from ${this.projectColour} h s 30), hsl(from ${this.projectColour} h s 70));`,
-	];
-
+	appVersion		= '0.3_dev';
+	projectColour;
 
 
 
@@ -33,7 +30,23 @@ class MeditApp extends HTMLApp {
 
 
 
-	documentDOMContentLoaded() {
+	async documentDOMContentLoaded() {
+
+		/* there are still  */
+
+		//let projectStyle = (await import("../style/project.css", { with: { type: "css" }})).default;
+		/* Chrome doesn't like stylesheets imported like this to have their own @import's in them, so better to keep imported styles v.simple */
+
+		console.log(projectStyle);
+		this.projectColour = projectStyle.cssRules[0].style.getPropertyValue('--project-colour');
+
+		this.appInfo = [`%c
+			Medit ${this.appVersion} by ldpercy
+			https://github.com/ldpercy/medit/releases/tag/${this.appVersion}
+			`.replace(/\n\t/g,'\n'),
+			`color: light-dark(hsl(from ${this.projectColour} h s 30), hsl(from ${this.projectColour} h s 70));`,
+		];
+
 		super.documentDOMContentLoaded();
 		this.setup();
 	}/* documentDOMContentLoaded */
@@ -44,7 +57,6 @@ class MeditApp extends HTMLApp {
 		this.loadSettings();
 		ui.setup();
 	}
-
 
 
 

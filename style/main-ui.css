@@ -27,14 +27,17 @@ header {
 	z-index: 50;
 
 	h1 {
+		/* font-family: gentium, serif; */
 		margin-block: 0em;
 		margin-top: 0em;
 		vertical-align:middle;
 		text-wrap-mode: nowrap;
 		/* white-space-collapse: preserve;	not working yet for the favicon */
 		img {
-			height: calc(3 * var(--base-length));
-			width: calc(3 * var(--base-length));
+			position:relative;
+			top:0.4ex;
+			height: calc(4 * var(--base-length));
+			width: calc(4 * var(--base-length));
 		}
 	}
 
