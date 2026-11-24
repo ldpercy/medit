@@ -5,7 +5,7 @@ export default {
 	"repository"	: "https://github.com/ldpercy/medit/",
 	"version"		: "0.3_dev",
 	"status"		: "Early development",
-	"date"			: "2026-11-20",
+	"date"			: "2026-11-24",
 	"tag"			: ["html","css","js","JSDoc","🍦js"],
 	"screenshot"	: [
 		{
