@@ -16,7 +16,7 @@ import project from '../project.js';
 class MeditApp extends HTMLApp {
 
 	appName			= 'Medit';
-	appVersion		= '0.3_dev';
+	appVersion		= '0.3.0';
 	projectColour;
 
 
